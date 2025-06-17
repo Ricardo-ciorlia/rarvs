@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <title>RARVS — Sua Marca, Seu Ritmo, Sua Conquista</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="RARVS: Agência de marketing digital moderna. Tráfego pago, branding e resultados sob medida para marcas que querem conquistar o novo."/>
+
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./styles.min.css" />
+
+  <link  href="./fonts/lost-in-space-regular-1.ttf">
+  <link  href="./fonts/SIFONN_PRO.otf">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+ 
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <div class="logo">
+    <img src="./img/logo.PNG" alt="Logo da empresa">
+  </div>
+      <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir menu">
+        <span class="hamburger-icon"></span>
+      </button>
+      <ul class="nav-links">
+        
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div id="progressContainer"><div id="progressBar"></div></div>
+  <button id="scrollTopBtn" title="Voltar ao topo">↑</button>
+
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-container" id="quiz">
+    <h1 class="hero-logo reveal">RARVS</h1>
+    <h2 class="hero-subtitle reveal" style="transition-delay:0.2s;">MARKETING DIGITAL</h2>
+   <div class="hero-carousel" style="transition-delay:0.4s;">
+  <div class="carousel-word" id="word0" style="color: #13587B;">SUA AGÊNCIA</div>
+  <div class="carousel-word" id="word1" style="color: #13587B;">SEU RITMO</div>
+  <div class="carousel-word" id="word2" style="color: #13587B;">SUA CONQUISTA</div>
+</div>
+    <div class="hero-bemvindo" id="bemvindoMsg"
+    >Bem-vindo à sua nova jornada.</div>
+    <div class="scroll-arrow" id="scrollArrow">&#8595;</div>
+  </div>
+
+  <div class="main-content">
+    <div class="section-wrapper reveal" id="servicos" style="transition-delay:1s;">
+      <h2>NOSSOS SERVIÇOS</h2>
+      <div class="services">
+        <div class="service-card">
+          <h3>Tráfego Pago</h3>
+          <p>Campanhas alinhadas ao seu momento. Inovação e testes. Mais controle? Otimização total do investimento.</p>
+          <a class="saiba-mais" data-target="trafego" href="#">Saiba mais</a>
+        </div>
+        <div class="service-card">
+          <h3>Sites & Landing Pages</h3>
+          <p>Base sólida e visual clean. Impressione e converta com design moderno e performance.</p>
+          <a class="saiba-mais" data-target="sites" href="#">Saiba mais</a>
+        </div>
+        <div class="service-card">
+          <h3>Redes Sociais & Conteúdo</h3>
+          <p>Conteúdo e linguagem que conectam sua marca ao público certo.</p>
+          <a class="saiba-mais" data-target="redes" href="#">Saiba mais</a>
+        </div>
+        <div class="service-card">
+          <h3>Logo, KV & Branding</h3>
+          <p>Sua identidade, seu estilo. Minimalista, ousado ou tradicional, sua marca inspira confiança.</p>
+          <a class="saiba-mais" data-target="branding" href="#">Saiba mais</a>
+        </div>
+        <div class="service-card">
+          <h3>CRM & Processos Comerciais</h3>
+          <p>Relacionamento de longo prazo, planejamento comercial estratégico, tudo no seu ritmo.</p>
+          <a class="saiba-mais" data-target="crm" href="#">Saiba mais</a>
+        </div>
+        <div class="service-card">
+          <h3>Terceirização Comercial</h3>
+          <p>Especialistas prontos para fortalecer sua equipe e conquistar novos mercados.</p>
+          <a class="saiba-mais" data-target="terceirizacao" href="#">Saiba mais</a>
+        </div>
+      </div>
+      <a class="main-cta" href="#depoimentos">Veja como esses serviços transformam marcas</a>
+    </div>
+
+    <div class="section-wrapper reveal" style="transition-delay:0.8s;">
+      <h2>SEU PERFIL DIGITAL RARVS</h2>
+      <div class="rarvs-radar-container">
+        <canvas id="rarvsRadar" width="320" height="320"></canvas>
+        <div class="slider-row">
+          <div class="slider-col">
+            <label for="inovacao">Inovação</label>
+            <input type="range" id="inovacao" min="1" max="10" value="6"/>
+          </div>
+          <div class="slider-col">
+            <label for="seguranca">Segurança</label>
+            <input type="range" id="seguranca" min="1" max="10" value="6"/>
+          </div>
+          <div class="slider-col">
+            <label for="reconhecimento">Reconhecimento</label>
+            <input type="range" id="reconhecimento" min="1" max="10" value="6"/>
+          </div>
+        </div>
+
+        <div class="profiles">
+          <div class="profile-card" id="profile-explorador">
+            <h3>Explorador</h3>
+            <p>Quer ir além? Somos parceiros de quem desafia o comum. Criatividade, tecnologia e coragem abrem novos caminhos para marcas inquietas.</p>
+          </div>
+          <div class="profile-card" id="profile-planejador">
+            <h3>Planejador</h3>
+            <p>Busca estabilidade? Nossa equipe entrega resultados confiáveis e acompanhamento próximo. Cresça com segurança, sabendo onde está e para onde vai.</p>
+          </div>
+          <div class="profile-card" id="profile-protagonista">
+            <h3>Protagonista</h3>
+            <p>Valoriza reconhecimento? Conectamos você com sua audiência e celebramos suas conquistas. Sua história e valores ganham destaque.</p>
+          </div>
+        </div>
+
+        <button id="btnAnalyze">Analisar Meu Perfil</button>
+        <div id="analysisResult"></div>
+      </div>
+    </div>
+
+    <div class="section-wrapper reveal" id="diferenciais" style="transition-delay:1.6s;">
+      <h2>O QUE FAZ A RARVS DIFERENTE?</h2>
+      <div class="svg-icons-row">
+        <div class="svg-icon-col">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="22" stroke="#48B4FF" stroke-width="2" fill="#16223B"/>
+            <polygon points="24,11 28,37 24,33 20,37" fill="#48B4FF"/>
+            <circle cx="24" cy="24" r="5" stroke="#48B4FF" stroke-width="2" fill="#ffffff"/>
+          </svg>
+          <div>
+            <strong>Estratégia sob medida</strong>
+            Soluções criadas para você, seu objetivo e seu ritmo.
+          </div>
+        </div>
+        <div class="svg-icon-col">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="22" stroke="#48B4FF" stroke-width="2" fill="#16223B"/>
+            <path d="M16 28c4 4 12 4 16 0M20 20a4 4 0 1 1-8 0 4 4 0 0 1 8 0zm16 0a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" stroke="#48B4FF" stroke-width="2"/>
+          </svg>
+          <div>
+            <strong>Equipe parceira</strong>
+            Planejamos, apoiamos e celebramos ao seu lado.
+          </div>
+        </div>
+        <div class="svg-icon-col">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <rect x="8" y="34" width="6" height="6" fill="#48B4FF"/>
+            <rect x="18" y="26" width="6" height="14" fill="#48B4FF"/>
+            <rect x="28" y="20" width="6" height="20" fill="#48B4FF"/>
+            <rect x="38" y="14" width="6" height="26" fill="#48B4FF"/>
+          </svg>
+          <div>
+            <strong>Resultados mensuráveis</strong>
+            Performance construída com verdade, sem atalhos.
+          </div>
+        </div>
+        <div class="svg-icon-col">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="22" stroke="#48B4FF" stroke-width="2" fill="#16223B"/>
+            <path d="M24 17v8m0 0l-4 4m4-4l4 4" stroke="#48B4FF" stroke-width="2"/>
+            <circle cx="24" cy="13" r="2" fill="#48B4FF"/>
+          </svg>
+          <div>
+            <strong>Inovação contínua</strong>
+            Você sempre à frente das tendências digitais.
+          </div>
+        </div>
+        <div class="svg-icon-col">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="22" stroke="#48B4FF" stroke-width="2" fill="#16223B"/>
+            <polygon points="24,16 29,29 19,29" fill="#48B4FF"/>
+            <circle cx="24" cy="35" r="2" fill="#48B4FF"/>
+          </svg>
+          <div>
+            <strong>Respeito & Qualidade</strong>
+            Detalhe e cuidado em tudo, como no universo outdoor.
+          </div>
+        </div>
+      </div>
+      <a class="main-cta" href="#faq">Saiba mais sobre nossos diferenciais</a>
+    </div>
+
+    <div class="section-wrapper reveal" id="projetos" style="transition-delay:1.4s;">
+      <h2>PROJETOS EM DESTAQUE</h2>
+      <p>Em breve você verá nossos cases incríveis aqui.</p>
+    </div>
+
+    <div class="section-wrapper testimonial-section reveal" id="depoimentos" style="transition-delay:1.2s;">
+      <h2>DEPOIMENTOS</h2>
+      <div class="testimonial-cards" id="testimonials">
+        <div class="testimonial-card active">
+          <p>"A RARVS transformou nosso negócio! Vendas subiram 40% em 3 meses."</p>
+          <h4>Maria Silva, CEO Empresa X</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>"Profissionais excepcionais, criativos e focados em resultados."</p>
+          <h4>João Santos, Marketing Empresa Y</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>"Nossa presença online nunca foi tão forte. Recomendo 100%."</p>
+          <h4>Ana Costa, Fundadora Empresa Z</h4>
+        </div>
+      </div>
+      <div class="testimonial-nav">
+        <button id="prevTest">◀</button>
+        <button id="nextTest">▶</button>
+      </div>
+    </div>
+
+    <div class="contact-form-section section-wrapper reveal" id="formSection" style="transition-delay:0.6s;">
+      <div class="contact-card">
+        <h2>Vamos conversar?</h2>
+        <form id="contactForm" autocomplete="off">
+          <input type="text" name="nome" placeholder="Seu nome" required/>
+          <input type="email" name="email" placeholder="Seu e-mail" required/>
+          <textarea name="mensagem" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
+          <button type="submit">Enviar mensagem</button>
+          <div class="contact-success" id="formSuccess"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="section-wrapper faq-section reveal" id="faq" style="transition-delay:1.8s;">
+      <h2>PERGUNTAS FREQUENTES</h2>
+      <div class="faq-accordion" id="faqAccordion">
+        <div class="faq-item">
+          <div class="faq-question">O que muda ao contratar a RARVS e não uma agência comum?<span class="faq-icon">&#9654;</span></div>
+          <div class="faq-answer">Na RARVS cada plano é criado sob medida para seu perfil e meta. Nada de pacotes prontos.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Posso mudar meu plano durante o projeto?<span class="faq-icon">&#9654;</span></div>
+          <div class="faq-answer">Sim! Liberdade total para ajustar, ampliar ou pausar serviços. Adaptamos a jornada junto com você.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Preciso entender de marketing digital para contratar a RARVS?<span class="faq-icon">&#9654;</span></div>
+          <div class="faq-answer">Não. Explicamos tudo de forma simples e clara, sem termos técnicos. Você participa e entende cada etapa.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Como saberei se os resultados estão acontecendo?<span class="faq-icon">&#9654;</span></div>
+          <div class="faq-answer">Relatórios claros, acompanhamento constante e ajustes rápidos. Medimos juntos cada avanço e adaptamos para buscar ainda mais resultados.</div>
+        </div>
+      </div>
+      <a class="main-cta" href="https://wa.me/5511998765432" target="_blank">Seja Parceiro RARVS</a>
+    </div>
+
+    <div class="section-wrapper final-cta-section reveal" id="contato" style="transition-delay:2s;">
+      <h2>Pronto para subir de nível no digital?</h2>
+      <p>Se quer inovar, crescer com segurança ou destacar sua marca, a RARVS é para você. Vamos juntos!</p>
+      <a class="main-cta" href="https://wa.me/5511998765432" target="_blank">Vamos conversar agora!</a>
+      <footer style="background-color: ; color: #000000; padding: 40px 20px; text-align: center; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p><strong>RARVS — Agência de Marketing Digital</strong></p>
+      <p>Autor: Mayko Nascimento</p>
+      <p>CNPJ: 53.969.400/0001-76</p>
+      <p>E-mail: contato@rarvs.com.br</p>
+      <hr style="border: none; height: 1px; background-color: #000000; margin: 20px 0;">
+      <p style="color: #13587b;">&copy; 2025 RARVS. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+    </div>
+  </div>
+
+  <div id="trafego" class="service-detail">
+    <h3>Tráfego Pago</h3>
+    <p>Nossa abordagem em Tráfego Pago inclui:</p>
+    <ul>
+      <li>Definição de público-alvo com segmentação avançada</li>
+      <li>Criação de anúncios otimizados para conversão (Facebook, Instagram, Google Ads)</li>
+      <li>Testes A/B contínuos para descobrir o criativo de melhor performance</li>
+      <li>Acompanhamento diário de métricas de CAC, CPM e ROI</li>
+      <li>Reuniões semanais de alinhamento e relatórios detalhados</li>
+    </ul>
+    <p>Garantimos que cada investimento gere o máximo de retorno possível, com total transparência.</p>
+    <a class="voltar" href="#servicos">← Voltar aos Serviços</a>
+  </div>
+
+  <div id="sites" class="service-detail">
+    <h3>Sites & Landing Pages</h3>
+    <p>Nossos Sites e Landing Pages oferecem:</p>
+    <ul>
+      <li>Design responsivo e minimalista, focado em conversão</li>
+      <li>Implementação com performance otimizada para SEO e carregamento rápido</li>
+      <li>Criação de páginas de captura 100% voltadas para geração de leads</li>
+      <li>Integração com ferramentas de CRM e automação de marketing</li>
+      <li>Manutenção contínua e ajustes conforme métricas de uso</li>
+    </ul>
+    <p>Seu site será bonito, rápido e projetado para gerar leads e vendas.</p>
+    <a class="voltar" href="#servicos">← Voltar aos Serviços</a>
+  </div>
+
+  <div id="redes" class="service-detail">
+    <h3>Redes Sociais & Conteúdo</h3>
+    <p>No serviço de Redes Sociais & Conteúdo fazemos:</p>
+    <ul>
+      <li>Planejamento de pautas e calendário editorial</li>
+      <li>Criação de posts, carrosséis e stories alinhados à sua marca</li>
+      <li>Produção de copywriting otimizada para engajamento</li>
+      <li>Gerenciamento de comunidade: atendimento a comentários e DMs</li>
+      <li>Análise de métricas (alcance, impressões e taxa de engajamento) e ajustes semanais</li>
+    </ul>
+    <p>Sua marca falará com o público certo, no tom certo, gerando resultados reais.</p>
+    <a class="voltar" href="#servicos">← Voltar aos Serviços</a>
+  </div>
+
+  <div id="branding" class="service-detail">
+    <h3>Logo, KV & Branding</h3>
+    <p>Em Logo, KV & Branding, trabalhamos:</p>
+    <ul>
+      <li>Desenvolvimento de logotipo único e memorável</li>
+      <li>Criação do Key Visual (KV) para comunicação digital e impressa</li>
+      <li>Definição de paleta de cores, tipografia e guidelines</li>
+      <li>Manual de aplicação: versões vertical, horizontal e ícone</li>
+      <li>Entrega de arquivos vetoriais (EPS, SVG) e raster (PNG, JPEG)</li>
+    </ul>
+    <p>Construímos uma identidade que traduz sua essência e se destaca no mercado.</p>
+    <a class="voltar" href="#servicos">← Voltar aos Serviços</a>
+  </div>
+
+  <div id="crm" class="service-detail">
+    <h3>CRM & Processos Comerciais</h3>
+    <p>Em CRM & Processos Comerciais entregamos:</p>
+    <ul>
+      <li>Mapeamento completo do funil de vendas</li>
+      <li>Implementação e customização de plataforma CRM (HubSpot, RD Station, Pipedrive)</li>
+      <li>Criação de fluxos de nutrição e automação de e-mail marketing</li>
+      <li>Treinamento da equipe comercial para uso correto das ferramentas</li>
+      <li>Análise de pipeline e relatórios de performance semanal</li>
+    </ul>
+    <p>Você terá controle total sobre leads, oportunidades e taxas de conversão.</p>
+    <a class="voltar" href="#servicos">← Voltar aos Serviços</a>
+  </div>
+
+  <div id="terceirizacao" class="service-detail">
+    <h3>Terceirização Comercial</h3>
+    <p>Em Terceirização Comercial oferecemos:</p>
+    <ul>
+      <li>Equipe de vendas especializada e treinada</li>
+      <li>Prospecção ativa de leads qualificados</li>
+      <li>Acompanhamento diário/semana de KPIs de vendas</li>
+      <li>Gestão de pipeline compartilhado e relatórios transparentes</li>
+      <li>Integração total com seu departamento interno, mantendo consistência de marca</li>
+    </ul>
+    <p>Você conta com um time de vendas dedicado, sem precisar contratar ou treinar internamente.</p>
+    <a class="voltar" href="#servicos">← Voltar aos Serviços</a>
+  </div>
+  
+
+<script src="main.js" defer></script>
+
+
+  
+
+</body>
+</html>
+
